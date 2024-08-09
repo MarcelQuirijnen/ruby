@@ -1,0 +1,26 @@
+// Place all the styles related to the clients controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.address, .contact {
+  padding: 0 0 0 10px;
+}
+.client {
+  border-bottom: solid 1px #CCC;
+  padding: 5px 0
+}
+
+.status p {
+  margin: 4px 0;
+}
+
+.client.hover {
+  background: #FAFAFA;
+}
+
+.client .admin {
+  display: none;
+}
+
+.client.hover .admin {
+  display: inline;
+}

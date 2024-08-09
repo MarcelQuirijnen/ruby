@@ -1,0 +1,30 @@
+<div class="page-header">
+    <h1>All Contractors</h1>
+</div>
+
+<%= link_to 'New Contractor', new_contractor_path, class: "btn btn-success"%>
+<div class="spacer">&nbsp;</div>
+<% @contractors.each do |contractor| %>
+   <div class="contractor">
+        <strong><%= contractor.firstname %></strong>
+        <strong><%= contractor.lastname %></strong>
+        <p class="address"><%= contractor.address1 %>
+                           <%= contractor.address2 %><br>
+                           <%= contractor.city %>
+                           <%= contractor.state %>
+                           <%= contractor.zip %></p>
+        <p class="contact"><%= contractor.phone %><br>
+                           <%= mail_to contractor.email, 'Email me' %></p>
+        <div class="meta">
+            <%= link_to 'Joined ' + time_ago_in_words(contractor.startdate) + ' ago', contractor %>
+            <span class="admin">
+                | <%= link_to 'Edit', edit_contractor_path(contractor) %> |
+                <%= link_to 'Destroy', contractor, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </span>
+        </div>
+   </div>
+<% end %>
+
+<br>
+
+

@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cont:</strong>
+  <%= @contractor.cont_id %>
+</p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @contractor.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @contractor.lastname %>
+</p>
+
+<p>
+  <strong>Address1:</strong>
+  <%= @contractor.address1 %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @contractor.address2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @contractor.city %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @contractor.zip %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @contractor.state %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @contractor.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @contractor.email %>
+</p>
+
+<p>
+  <strong>Startdate:</strong>
+  <%= @contractor.startdate %>
+</p>
+
+<p>
+  <strong>Updated:</strong>
+  <%= @contractor.updated %>
+</p>
+
+<%= link_to 'Edit', edit_contractor_path(@contractor) %> |
+<%= link_to 'Back', contractors_path %>

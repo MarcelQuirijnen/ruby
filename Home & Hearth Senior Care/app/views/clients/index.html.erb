@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h1>All Clients</h1>
+</div>
+
+<%= link_to 'New Client', new_client_path, class: "btn btn-success"%>
+<div class="spacer">&nbsp;</div>
+<% @clients.each do |client| %>
+    <div class="client">
+      <strong><%= client.firstname %></strong>
+      <strong><%= client.lastname %></strong>
+      <p class="address"><%= client.address1 %>
+        <%= client.address2 %><br>
+        <%= client.city %>
+        <%= client.state %>
+        <%= client.zip %></p>
+
+      <p class="contact"><%= client.phone %><br>
+                         <%= client.email %></p>
+
+      <div class="meta">
+      <%= link_to 'Joined ' + time_ago_in_words(client.startdate) + ' ago', client %>
+      <span class="admin">
+        | <%= link_to 'Edit', edit_client_path(client) %> |
+        <%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </span>
+    </div>
+    </div>
+<% end %>
